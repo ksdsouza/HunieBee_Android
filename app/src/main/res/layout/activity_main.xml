@@ -20,7 +20,7 @@
             android:background="@drawable/ripple"
             android:clickable="true"
             android:focusable="true"
-            android:onClick="goTogoToDetail"
+            android:onClick="goToDetail"
             android:orientation="horizontal"
             android:paddingBottom="12dp"
             android:paddingLeft="@dimen/activity_horizontal_margin"
