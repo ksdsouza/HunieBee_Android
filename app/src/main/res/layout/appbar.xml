@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    style="@style/AppTheme"
+    android:background="@android:color/transparent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="xkdawg.com.huniebee2.MainActivity"
     android:layout_gravity="center"
@@ -29,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <ImageButton
-            android:onClick="appSettings"
+            android:onClick="goToSettings"
             android:layout_gravity="right|center_vertical"
             android:layout_width="24dp"
             android:layout_height="24dp"

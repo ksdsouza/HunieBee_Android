@@ -18,7 +18,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Image Settings" />
-
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -26,7 +25,6 @@
         android:layout_marginTop="4dp"
         android:background="#BDBDBD"
         android:paddingBottom="8dp" />
-
     <TextView
         style="@android:style/TextAppearance.Material.Subhead"
         android:layout_width="match_parent"
@@ -164,4 +162,5 @@
             android:inputType="number"
             android:text="0" />
     </LinearLayout>
+
 </LinearLayout>
