@@ -18,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Image Settings" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -25,6 +26,7 @@
         android:layout_marginTop="4dp"
         android:background="#BDBDBD"
         android:paddingBottom="8dp" />
+
     <TextView
         style="@android:style/TextAppearance.Material.Subhead"
         android:layout_width="match_parent"
@@ -82,11 +84,11 @@
             android:layout_weight="5" />
 
         <TextView
-            android:layout_weight="1"
             android:id="@+id/val2"
             style="@android:style/TextAppearance.Material.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:inputType="number"
             android:text="0" />
     </LinearLayout>

@@ -11,27 +11,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageButton
-                android:scaleType="centerCrop"
-                android:background="@drawable/ripple"
                 android:id="@+id/back"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_gravity="left|top"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="13dp"
-                android:src="@drawable/back"
+                android:background="@drawable/ripple"
                 android:minHeight="13dp"
                 android:onClick="onBack"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back"
                 app:layout_collapseMode="pin" />
+
             <android.support.v7.widget.Toolbar
-                android:layout_toRightOf="@id/back"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:layout_toRightOf="@id/back"
                 android:background="?attr/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
         </RelativeLayout>
@@ -42,12 +45,12 @@
     <include layout="@layout/content_settings" />
 
     <android.support.design.widget.FloatingActionButton
-        android:onClick=""
         android:id="@+id/fab3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:onClick=""
         android:src="@drawable/save" />
 
 </android.support.design.widget.CoordinatorLayout>

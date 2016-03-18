@@ -46,17 +46,17 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
             <ImageButton
-                android:scaleType="centerCrop"
-                android:background="@drawable/ripple"
                 android:id="@+id/back"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_gravity="left|top"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="13dp"
-                android:src="@drawable/back"
+                android:background="@drawable/ripple"
                 android:minHeight="13dp"
                 android:onClick="onBack"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back"
                 app:layout_collapseMode="pin" />
 
         </android.support.design.widget.CollapsingToolbarLayout>

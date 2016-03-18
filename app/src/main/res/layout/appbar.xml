@@ -1,43 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    style="@style/AppTheme"
-    android:background="@android:color/transparent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="xkdawg.com.huniebee2.MainActivity"
     android:layout_gravity="center"
-    android:orientation="vertical">
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    tools:context="xkdawg.com.huniebee2.MainActivity">
+
     <LinearLayout
-        android:weightSum="3"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
         <ImageView
-            android:layout_gravity="center_vertical"
-            android:layout_width="24dp"
-            android:src="@drawable/ic_launcher"
-            android:layout_height="24dp" />
-        <TextView
-            android:layout_gravity="left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="32dp"
-            android:textColor="#FFF"
-            android:text="HunieBee"
-            android:textSize="24dp" />
-        <Space
-            android:layout_weight="3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <ImageButton
-            android:onClick="goToSettings"
-            android:layout_gravity="right|center_vertical"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="32dp"
+            android:text="HunieBee"
+            android:textColor="#FFF"
+            android:textSize="24dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|center_vertical"
             android:background="@drawable/ripple"
+            android:onClick="goToSettings"
             android:scaleType="centerCrop"
-            android:src="@drawable/settings"/>
+            android:src="@drawable/settings" />
     </LinearLayout>
 
 </LinearLayout>

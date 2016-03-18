@@ -1,3 +1,8 @@
+/**
+ * Detail Activity for HunieBee
+ *
+ * @since 1.0.0
+ */
 package xkdawg.com.huniebee2;
 
 import android.content.Intent;
@@ -5,7 +10,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +19,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Detail extends AppCompatActivity {
@@ -25,12 +28,22 @@ public class Detail extends AppCompatActivity {
     private final String[] PREFERENCES = {"Most Desired Trait", "Least Desired Trait", "Loves Gift Type", "Unique Gift Type", "Likes Gift Types", "Likes Food Types", "Favorite Drink", "Alcohol Tolerance"};
     private final String[] PREFFILEHEADERS = {"MDT", "LDT", "LovesGifts", "UniqueGifts", "LikesGifts", "LikesFood", "FavDrink", "AlcoholTolerance"};
 
+
+    /**
+     * On Creation
+     *
+     * Set the transparent status bar, style the collapsing toolbar(give the title a dropshadow)
+     * Get id of which row from main activity open this, and load the appropriate information.
+     * Create and populate the layout.
+     *
+     * @since 1.0.0
+     * @return void
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             final Window window = getWindow();
             window.getDecorView().setSystemUiVisibility(
@@ -38,19 +51,20 @@ public class Detail extends AppCompatActivity {
                             View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
             );
             window.setStatusBarColor(getResources().getColor(R.color.statusTransparent));
-            
+
             CollapsingToolbarLayout ctl = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
             ctl.setExpandedTitleTextAppearance(R.style.DetailTheme);
-            
+            ctl.setCollapsedTitleTextAppearance(R.style.DetailTheme);
+
             Intent intent = getIntent();
             String person = intent.getStringExtra("Person");
-            ImageView img = (ImageView) findViewById(R.id.image);            
-            
+            ImageView img = (ImageView) findViewById(R.id.image);
+
             TextView desc = (TextView) findViewById(R.id.character_description);
             TextView personality = (TextView) findViewById(R.id.character_personality);
             TextView history = (TextView) findViewById(R.id.character_history);
 
-            int picNum = random();
+            int picNum = picToLoad();
             switch (person) {
                 case "xkdawg.com.huniebee2:id/aiko":
                     if (picNum == 1) {
@@ -70,10 +84,10 @@ public class Detail extends AppCompatActivity {
                     break;
                 case "xkdawg.com.huniebee2:id/audrey":
                     if (picNum == 1) {
-                        
-                          img.setImageResource(R.drawable.audreybg);
+
+                        img.setImageResource(R.drawable.audreybg);
                     } else if (picNum == 2) {
-                        
+
                         img.setImageResource(R.drawable.audreybg2);
                     } else if (picNum == 3) {
                         img.setImageResource(R.drawable.audreybg3);
@@ -200,7 +214,7 @@ public class Detail extends AppCompatActivity {
                     girlName = "Tiffany";
                     break;
                 default:
-                    Logger.wtf("HunieBee","Unknown Selection!?");
+                    Util.wtf("HunieBee", "Unknown Selection!?");
                     break;
             }
 
@@ -269,6 +283,15 @@ public class Detail extends AppCompatActivity {
         }
     }
 
+    /**
+     * Get Info
+     *
+     * Read the information file, and load relevant information
+     *
+     * @since 1.0.0
+     * @param  infoType what info we are looking for
+     * @return String   corresponding information
+     */
     public String getInfo(String infoType) {
         try {
             Scanner fileScanner = new Scanner(getAssets().open(String.format("information.txt")));
@@ -293,11 +316,20 @@ public class Detail extends AppCompatActivity {
                 }
             }
         } catch (Exception e) {
-            Logger.error("HunieBee",e.toString());
+            Util.error("HunieBee", "Unexpected error: " + e.toString());
         }
         return null;
     }
 
+    /**
+     * Get Character Preferences
+     *
+     * Read the preferences file, and load relevant information
+     *
+     * @since 1.0.0
+     * @param  prefType what preferences we are looking for
+     * @return String   corresponding preferences
+     */
     public String getPref(String prefType) {
         try {
             Scanner fileScanner = new Scanner(getAssets().open(String.format("preferences.txt")));
@@ -322,24 +354,40 @@ public class Detail extends AppCompatActivity {
                 }
             }
         } catch (Exception e) {
-            Logger.warning("Hunie Bee", e.toString());
+            Util.warning("Hunie Bee", e.toString());
         }
         return null;
     }
 
+    /**
+     * On Back
+     *
+     * What to do if back button is pressed(go back...duh)
+     *
+     * @since 1.0.0
+     * @param  v       which view called this
+     * @return void
+     */
     public void onBack(View v) {
         finish();
     }
 
-    private int random() {
+    /**
+     * Header picture to Load
+     *
+     * Use RNG with user preferences to determine which picture should be used as header.
+     *
+     * @since 1.0.0
+     * @return int     picture number to load(1-4)
+     */
+    private int picToLoad() {
         int sum = MainActivity.num[1] + MainActivity.num[2] + MainActivity.num[3] + MainActivity.num[0];
 
         if (sum == 0) {
             return 1;
         }
 
-        Random rand = new Random();
-        int n = rand.nextInt(sum);
+        int n = Util.Random(sum);
 
         if (0 <= n && n < MainActivity.num[0]) {
             return 1;
