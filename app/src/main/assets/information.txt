@@ -22,6 +22,30 @@ Audrey:
 	Fav. Color:Velvet Red
 	Fav. Season:Spring
 	Hangout:Nightclub
+Celeste:
+	Age:32 years old
+	Homeworld:Tendricide
+	Height:5'9"
+	Weight:130 lbs
+	Occupation:Bounty Hunter
+	Cup Size:DD
+	Birthday:July 20th
+	Hobby:Swimming
+	Fav. Color:Shiny Silver
+	Fav. Season:Winter
+	Hangout:Beach
+Momo:
+	Age:1 cat years old(18 human years old)
+	Homeworld:Tendricide
+	Height:5'2"
+	Weight:100 lbs
+	Occupation:Kitty
+	Cup Size:B
+	Birthday:October 2nd
+	Hobby:Sleeping
+	Fav. Color:Gleamy Gold
+	Fav. Season:Spring
+	Hangout:Hiking Trail
 Kyanna:
 	Age:21 years old
 	Education:High school dropout
@@ -111,3 +135,16 @@ Kyu:
 	Fav. Color:Hot Pink
 	Fav. Season:Summer
 	Hangout:Bedroom
+Venus:
+	Last Name:Sugardust
+	Age:About 10'000 years old
+	Homeworld:Sky Garden
+	Height:5'8"
+	Weight:128 lbs
+	Occupation:Love Goddess
+	Cup Size:DD
+	Birthday:September 1st 
+	Hobby:Relaxing (Lounging around)
+	Fav. Color:Pearl White
+	Fav. Season:Autumn
+	Hangout:Hot Spring

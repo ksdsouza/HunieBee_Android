@@ -16,6 +16,24 @@ Audrey:
 	LikesFood:Junk Food, Fruit
 	FavDrink:Daiquiri
 	AlcoholTolerance:High
+Celeste:
+	MDT:Talent (Blue)
+	LDT:Flirtation (Green)
+	LovesGifts:Scuba
+	UniqueGifts:Outerspace
+	LikesGifts:Academy, Fitness
+	LikesFood:Fruit, Candy
+	FavDrink:Champagne
+	AlcoholTolerance:High
+Momo:
+	MDT:Romance (Orange)
+	LDT:Sexuality(Red)
+	LovesGifts:Aquarium
+	UniqueGifts:Cat Toys
+	LikesGifts:Toys, Sports
+	LikesFood:Veggies, Dessert
+	FavDrink:Lime Margarita
+	AlcoholTolerance:Low
 Kyanna:
 	MDT:Talent (Blue)
 	LDT:Romance (Orange)
@@ -79,4 +97,13 @@ Kyu:
 	LikesFood:Candy, Junk Food
 	FavDrink:Mojito
 	AlcoholTolerance:Normal
+Venus:
+	MDT:Sexuality (Red)
+	LDT:Flirtation (Green)
+	LovesGifts:Garden
+	UniqueGifts:Gemstones
+	LikesGifts:Baking, Yoga
+	LikesFood:Dessert, Breakfast
+	FavDrink:Whisky
+	AlcoholTolerance:Insanely High
 	

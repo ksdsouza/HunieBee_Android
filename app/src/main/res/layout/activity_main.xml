@@ -12,314 +12,425 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-                <LinearLayout
-                android:id="@+id/aiko"
-                    android:paddingTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="goToDetail"
-                    android:orientation="horizontal"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+        <LinearLayout
+            android:id="@+id/aiko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:duplicateParentState="true"
-                        android:src="@drawable/aiko" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:duplicateParentState="true"
+                android:src="@drawable/aiko" />
 
-                    <Space
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true" />
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        style="@android:style/TextAppearance.Material.Headline"
-                        android:duplicateParentState="true"
-                        android:text="Aiko" />
-                </LinearLayout>
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Aiko" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/audrey"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="goToDetail"
-                    android:orientation="horizontal"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
 
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:duplicateParentState="true"
-                        android:src="@drawable/audrey" />
+        <LinearLayout
+            android:id="@+id/audrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
 
-                    <Space
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/audrey" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="Audrey"
-                        android:layout_gravity="center"
-                        style="@android:style/TextAppearance.Material.Headline" />
-                </LinearLayout>
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
 
-                <LinearLayout
-                    android:id="@+id/beli"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="goToDetail"
-                    android:orientation="horizontal"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Audrey" />
+        </LinearLayout>
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:duplicateParentState="true"
-                        android:src="@drawable/beli" />
+        <LinearLayout
+            android:id="@+id/beli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
 
-                    <Space
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/beli" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="Beli"
-                        android:layout_gravity="center"
-                        style="@android:style/TextAppearance.Material.Headline" />
-                </LinearLayout>
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
 
-                <LinearLayout
-                    android:id="@+id/jessie"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="goToDetail"
-                    android:orientation="horizontal"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Beli" />
+        </LinearLayout>
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:duplicateParentState="true"
-                        android:src="@drawable/jessie" />
+        <LinearLayout
+            android:id="@+id/celeste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
 
-                    <Space
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/celeste" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="Jessie"
-                        android:layout_gravity="center"
-                        style="@android:style/TextAppearance.Material.Headline" />
-                </LinearLayout>
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
 
-                <LinearLayout
-                    android:id="@+id/kyanna"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="goToDetail"
-                    android:orientation="horizontal"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Celeste" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/jessie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:duplicateParentState="true"
-                        android:src="@drawable/kyanna" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/jessie" />
 
-                    <Space
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true" />
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="Kyanna"
-                        android:layout_gravity="center"
-                        style="@android:style/TextAppearance.Material.Headline" />
-                </LinearLayout>
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Jessie" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/kyu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="goToDetail"
-                    android:orientation="horizontal"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+        <LinearLayout
+            android:id="@+id/kyanna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:duplicateParentState="true"
-                        android:src="@drawable/kyu" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/kyanna" />
 
-                    <Space
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true" />
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="Kyu"
-                        android:layout_gravity="center"
-                        style="@android:style/TextAppearance.Material.Headline" />
-                </LinearLayout>
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Kyanna" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/lola"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="goToDetail"
-                    android:orientation="horizontal"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+        <LinearLayout
+            android:id="@+id/kyu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:duplicateParentState="true"
-                        android:src="@drawable/lola" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/kyu" />
 
-                    <Space
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true" />
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="Lola"
-                        android:layout_gravity="center"
-                        style="@android:style/TextAppearance.Material.Headline" />
-                </LinearLayout>
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Kyu" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/nikki"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="goToDetail"
-                    android:orientation="horizontal"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+        <LinearLayout
+            android:id="@+id/lola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:duplicateParentState="true"
-                        android:src="@drawable/nikki" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/lola" />
 
-                    <Space
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true" />
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="Nikki"
-                        android:layout_gravity="center"
-                        style="@android:style/TextAppearance.Material.Headline" />
-                </LinearLayout>
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Lola" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/tiffany"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="goToDetail"
-                    android:orientation="horizontal"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+        <LinearLayout
+            android:id="@+id/momo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:duplicateParentState="true"
-                        android:src="@drawable/tiffany" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/momo" />
 
-                    <Space
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true" />
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="Tiffany"
-                        android:layout_gravity="center"
-                        style="@android:style/TextAppearance.Material.Headline" />
-                </LinearLayout>
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Momo" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/nikki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/nikki" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
+
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Nikki" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tiffany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/tiffany" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
+
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Tiffany" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/venus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToDetail"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:duplicateParentState="true"
+                android:src="@drawable/venus" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true" />
+
+            <TextView
+                style="@android:style/TextAppearance.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="Venus" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

@@ -38,6 +38,7 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
         setContentView(R.layout.activity_settings);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Settings");
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab3);

@@ -31,13 +31,13 @@ public class Detail extends AppCompatActivity {
 
     /**
      * On Creation
-     *
+     * <p/>
      * Set the transparent status bar, style the collapsing toolbar(give the title a dropshadow)
      * Get id of which row from main activity open this, and load the appropriate information.
      * Create and populate the layout.
      *
-     * @since 1.0.0
      * @return void
+     * @since 1.0.0
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +116,38 @@ public class Detail extends AppCompatActivity {
                     history.setText(R.string.beli_history);
                     ctl.setTitle("Beli Lapran");
                     girlName = "Beli";
+                    break;
+                case "xkdawg.com.huniebee2:id/celeste":
+                    if (picNum == 1) {
+                        img.setImageResource(R.drawable.celestebg);
+                    } else if (picNum == 2) {
+                        img.setImageResource(R.drawable.celestebg2);
+                    } else if (picNum == 3) {
+                        img.setImageResource(R.drawable.celestebg3);
+                    } else {
+                        img.setImageResource(R.drawable.celestebg4);
+                    }
+                    desc.setText(R.string.celeste_description);
+                    personality.setText(R.string.celeste_personality);
+                    history.setText(R.string.celeste_history);
+                    ctl.setTitle("Celeste Luvendass");
+                    girlName = "Celeste";
+                    break;
+                case "xkdawg.com.huniebee2:id/momo":
+                    if (picNum == 1) {
+                        img.setImageResource(R.drawable.momobg);
+                    } else if (picNum == 2) {
+                        img.setImageResource(R.drawable.momobg2);
+                    } else if (picNum == 3) {
+                        img.setImageResource(R.drawable.momobg3);
+                    } else {
+                        img.setImageResource(R.drawable.momobg4);
+                    }
+                    desc.setText(R.string.momo_description);
+                    personality.setText(R.string.momo_personality);
+                    history.setText(R.string.momo_history);
+                    ctl.setTitle("Momo");
+                    girlName = "Momo";
                     break;
                 case "xkdawg.com.huniebee2:id/jessie":
                     if (picNum == 1) {
@@ -213,6 +245,22 @@ public class Detail extends AppCompatActivity {
                     ctl.setTitle("Tiffany Maye");
                     girlName = "Tiffany";
                     break;
+                case "xkdawg.com.huniebee2:id/venus":
+                    if (picNum == 1) {
+                        img.setImageResource(R.drawable.venusbg);
+                    } else if (picNum == 2) {
+                        img.setImageResource(R.drawable.venusbg2);
+                    } else if (picNum == 3) {
+                        img.setImageResource(R.drawable.venusbg3);
+                    } else {
+                        img.setImageResource(R.drawable.venusbg4);
+                    }
+                    desc.setText(R.string.venus_description);
+                    personality.setText(R.string.venus_personality);
+                    history.setText(R.string.venus_history);
+                    ctl.setTitle("Theiatena Venus");
+                    girlName = "Venus";
+                    break;
                 default:
                     Util.wtf("HunieBee", "Unknown Selection!?");
                     break;
@@ -234,8 +282,10 @@ public class Detail extends AppCompatActivity {
                 tv.setPadding(42, 10, 42, 42);
                 tv.setTextAppearance(this, android.support.design.R.style.TextAppearance_AppCompat_Body1);
 
-                if (girlName.equalsIgnoreCase("Kyu") && i == 1) {
+                if ((girlName.equalsIgnoreCase("Kyu") || girlName.equalsIgnoreCase("Celeste") || girlName.equalsIgnoreCase("Venus")) && i == 1) {
                     tv.setText("Homeworld");
+                } else if (girlName.equalsIgnoreCase("Kyu") && i == 1) {
+                    continue;
                 } else {
                     tv.setText(DETAILFILEHEADERS[i]);
                 }
@@ -247,8 +297,10 @@ public class Detail extends AppCompatActivity {
                 tv.setPadding(42, 10, 42, 42);
                 tv.setGravity(Gravity.RIGHT);
 
-                if (girlName.equalsIgnoreCase("Kyu") && i == 1) {
-                    tv.setText("Sky Garden");
+                if ((girlName.equalsIgnoreCase("Kyu") || girlName.equalsIgnoreCase("Celeste") || girlName.equalsIgnoreCase("Venus")) && i == 1) {
+                    tv.setText(getInfo("Homeworld"));
+                } else if (girlName.equalsIgnoreCase("Momo") && i == 1) {
+                    continue;
                 } else {
                     tv.setText(getInfo(DETAILFILEHEADERS[i]));
                 }
@@ -285,12 +337,12 @@ public class Detail extends AppCompatActivity {
 
     /**
      * Get Info
-     *
+     * <p/>
      * Read the information file, and load relevant information
      *
-     * @since 1.0.0
-     * @param  infoType what info we are looking for
+     * @param infoType what info we are looking for
      * @return String   corresponding information
+     * @since 1.0.0
      */
     public String getInfo(String infoType) {
         try {
@@ -323,12 +375,12 @@ public class Detail extends AppCompatActivity {
 
     /**
      * Get Character Preferences
-     *
+     * <p/>
      * Read the preferences file, and load relevant information
      *
-     * @since 1.0.0
-     * @param  prefType what preferences we are looking for
+     * @param prefType what preferences we are looking for
      * @return String   corresponding preferences
+     * @since 1.0.0
      */
     public String getPref(String prefType) {
         try {
@@ -361,12 +413,12 @@ public class Detail extends AppCompatActivity {
 
     /**
      * On Back
-     *
+     * <p/>
      * What to do if back button is pressed(go back...duh)
      *
-     * @since 1.0.0
-     * @param  v       which view called this
+     * @param v which view called this
      * @return void
+     * @since 1.0.0
      */
     public void onBack(View v) {
         finish();
@@ -374,11 +426,11 @@ public class Detail extends AppCompatActivity {
 
     /**
      * Header picture to Load
-     *
+     * <p/>
      * Use RNG with user preferences to determine which picture should be used as header.
      *
-     * @since 1.0.0
      * @return int     picture number to load(1-4)
+     * @since 1.0.0
      */
     private int picToLoad() {
         int sum = MainActivity.num[1] + MainActivity.num[2] + MainActivity.num[3] + MainActivity.num[0];

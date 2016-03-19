@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fitsSystemWindows="true"
-            app:collapsedTitleGravity="center_horizontal"
+            app:collapsedTitleGravity="center"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginEnd="48dp"
             app:expandedTitleMarginStart="16dp"
@@ -313,6 +313,5 @@
 
 
     </android.support.v4.widget.NestedScrollView>
-
 
 </android.support.design.widget.CoordinatorLayout>
