@@ -31,7 +31,7 @@ public class Detail extends AppCompatActivity {
 
     /**
      * On Creation
-     * <p/>
+     * <p>
      * Set the transparent status bar, style the collapsing toolbar(give the title a dropshadow)
      * Get id of which row from main activity open this, and load the appropriate information.
      * Create and populate the layout.
@@ -337,7 +337,7 @@ public class Detail extends AppCompatActivity {
 
     /**
      * Get Info
-     * <p/>
+     * <p>
      * Read the information file, and load relevant information
      *
      * @param infoType what info we are looking for
@@ -375,7 +375,7 @@ public class Detail extends AppCompatActivity {
 
     /**
      * Get Character Preferences
-     * <p/>
+     * <p>
      * Read the preferences file, and load relevant information
      *
      * @param prefType what preferences we are looking for
@@ -413,7 +413,7 @@ public class Detail extends AppCompatActivity {
 
     /**
      * On Back
-     * <p/>
+     * <p>
      * What to do if back button is pressed(go back...duh)
      *
      * @param v which view called this
@@ -426,7 +426,7 @@ public class Detail extends AppCompatActivity {
 
     /**
      * Header picture to Load
-     * <p/>
+     * <p>
      * Use RNG with user preferences to determine which picture should be used as header.
      *
      * @return int     picture number to load(1-4)

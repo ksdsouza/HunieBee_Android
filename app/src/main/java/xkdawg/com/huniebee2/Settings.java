@@ -22,15 +22,15 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
 
     /**
      * On Creation
-     *
+     * <p/>
      * Load toolbar, and floating action button(save button), and each seekbar and textview for
      * each image's appearance probability.
-     *
+     * <p/>
      * Set an onChangeListener to each slider, and set initial progress to whatever was saved in
      * preference file(or 75,25,0,0 by default)
      *
-     * @since 1.0.0
      * @return void
+     * @since 1.0.0
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,11 +70,11 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
 
     /**
      * On Progress Change
-     *
+     * <p/>
      * Determine which seekbar moved, and update it's textview based on the seekbar's progress.
      *
-     * @since 1.0.0
      * @return void
+     * @since 1.0.0
      */
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -103,10 +103,11 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
 
     /**
      * On StartTrackingTouch
-     *
+     * <p/>
      * Does nothing. Necessary method when implementing onProgressChanged
-     * @since 1.0.0
+     *
      * @return void
+     * @since 1.0.0
      */
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
@@ -114,10 +115,11 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
 
     /**
      * On onStopTrackingTouch
-     *
+     * <p/>
      * Does nothing. Necessary method when implementing onProgressChanged
-     * @since 1.0.0
+     *
      * @return void
+     * @since 1.0.0
      */
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
@@ -125,13 +127,14 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
 
     /**
      * Save Preferences
-     *
+     * <p/>
      * When user presses the floating action bar, edit shared preferences, and save settings under the appName.
      * Then, load these preferences as probability for current run of the app.
-     *
+     * <p/>
      * Each probability is saved as a 3 digit number. Ex. if slider values are 75,25,0,0: probability would be saved as: 075025000000
-     * @since 1.0.0
+     *
      * @return void
+     * @since 1.0.0
      */
     private void savePrefs() {
 
@@ -154,12 +157,12 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
 
     /**
      * On Back
-     *
+     * <p/>
      * What to do if back button is pressed(go back...duh)
      *
-     * @since 1.0.0
-     * @param  v       which view called this
+     * @param v which view called this
      * @return void
+     * @since 1.0.0
      */
     public void onBack(View v) {
         finish();

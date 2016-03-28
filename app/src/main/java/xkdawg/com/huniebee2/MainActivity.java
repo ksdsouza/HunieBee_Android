@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * On Creation
-     * <p/>
+     * <p>
      * Set the custom appbar from layout, load detail activity's image probabilities from settings
      *
      * @return void
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Load image settings
-     * <p/>
+     * <p>
      * Loads image settings from preferences and stored them into an array that the rest of the app can access.
      *
      * @return void
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Go to Settings
-     * <p/>
+     * <p>
      * When the user taps the settings button, take them to that activity
      *
      * @return void
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Go To Detail
-     * <p/>
+     * <p>
      * When one of the row's is tapped. Send id of the row and launch the detail activity
      *
      * @param v which view called the listener

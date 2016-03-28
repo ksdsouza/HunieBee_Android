@@ -35,7 +35,7 @@ Celeste:
 	Fav. Season:Winter
 	Hangout:Beach
 Momo:
-	Age:1 cat years old(18 human years old)
+	Age:1 cat year old
 	Homeworld:Tendricide
 	Height:5'2"
 	Weight:100 lbs

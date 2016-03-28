@@ -1,9 +1,9 @@
 /**
  * Utility File
- * <p/>
+ * <p>
  * Contains useful tools for both this, and future projects.
  * Created:      2016-02-23 @ 9:49 PM.
- * <p/>
+ * <p>
  * Last Updated: 2016-.3-18 @ 12:50 PM.
  *
  * @since 1.0.0
