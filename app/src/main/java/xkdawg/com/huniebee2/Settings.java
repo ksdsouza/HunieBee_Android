@@ -16,8 +16,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
-    private SeekBar[] sb = new SeekBar[4];
     public final String PREFS_NAME = "HunieBee2";
+    private SeekBar[] sb = new SeekBar[4];
     private TextView[] tv = new TextView[4];
 
     /**
@@ -151,7 +151,7 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
             MainActivity.num[i] = sb[i].getProgress();
         }
 
-        editor.commit();
+        editor.apply();
     }
 
 

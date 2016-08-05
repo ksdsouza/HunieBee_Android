@@ -16,34 +16,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/back"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_gravity="left|top"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="13dp"
-                android:background="@drawable/ripple"
-                android:minHeight="13dp"
-                android:onClick="onBack"
-                android:scaleType="centerCrop"
-                android:src="@drawable/back"
-                app:layout_collapseMode="pin" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:title="Settings"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:layout_toRightOf="@id/back"
                 android:background="?attr/colorPrimary"
+                android:title="Settings"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
         </RelativeLayout>
 
 
     </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_settings" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab3"
@@ -53,5 +37,7 @@
         android:layout_margin="@dimen/fab_margin"
         android:onClick=""
         android:src="@drawable/save" />
+
+    <include layout="@layout/content_settings" />
 
 </android.support.design.widget.CoordinatorLayout>

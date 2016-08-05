@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.appbar);
+
         loadImageSettings();
     }
 
@@ -82,5 +83,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Detail.class);
         intent.putExtra("Person", id);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 }

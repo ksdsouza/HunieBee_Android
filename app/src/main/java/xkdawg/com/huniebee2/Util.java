@@ -25,12 +25,13 @@ import static android.util.Log.w;
 public class Util {
     /**
      * Debug
-     *
+     * <p>
      * Write a debug message to log
-     * @since 1.0.0
-     * @param index       app name, or whatever tag associated with message
-     * @param message     message to be displayed
+     *
+     * @param index   app name, or whatever tag associated with message
+     * @param message message to be displayed
      * @return void
+     * @since 1.0.0
      */
     public static void debug(String index, String message) {
         d(index, message);
@@ -38,12 +39,13 @@ public class Util {
 
     /**
      * Error
-     *
+     * <p>
      * Write an error message to log
-     * @since 1.0.0
-     * @param  index       app name, or whatever tag associated with message
-     * @param  message     message to be displayed
+     *
+     * @param index   app name, or whatever tag associated with message
+     * @param message message to be displayed
      * @return void
+     * @since 1.0.0
      */
     public static void error(String index, String message) {
         e(index, message);
@@ -51,12 +53,13 @@ public class Util {
 
     /**
      * Info
-     *
+     * <p>
      * Write an info message to log
-     * @since 1.0.0
-     * @param  index       app name, or whatever tag associated with message
-     * @param  message     message to be displayed
+     *
+     * @param index   app name, or whatever tag associated with message
+     * @param message message to be displayed
      * @return void
+     * @since 1.0.0
      */
     public static void info(String index, String message) {
         i(index, message);
@@ -64,12 +67,13 @@ public class Util {
 
     /**
      * Verbose
-     *
+     * <p>
      * Write a verbose message to log
-     * @since 1.0.0
-     * @param  index       app name, or whatever tag associated with message
-     * @param  message     message to be displayed
+     *
+     * @param index   app name, or whatever tag associated with message
+     * @param message message to be displayed
      * @return void
+     * @since 1.0.0
      */
     public static void verbose(String index, String message) {
         v(index, message);
@@ -77,12 +81,13 @@ public class Util {
 
     /**
      * Warning
-     *
+     * <p>
      * Write a warning message to log
-     * @since 1.0.0
-     * @param  index       app name, or whatever tag associated with message
-     * @param  message     message to be displayed
+     *
+     * @param index   app name, or whatever tag associated with message
+     * @param message message to be displayed
      * @return void
+     * @since 1.0.0
      */
     public static void warning(String index, String message) {
         w(index, message);
@@ -90,12 +95,13 @@ public class Util {
 
     /**
      * WTF
-     *
+     * <p>
      * Write a wtf message to log
-     * @since 1.0.0
-     * @param  index       app name, or whatever tag associated with message
-     * @param  message     message to be displayed
+     *
+     * @param index   app name, or whatever tag associated with message
+     * @param message message to be displayed
      * @return void
+     * @since 1.0.0
      */
     public static void wtf(String index, String message) {
         android.util.Log.wtf(index, "wtf: " + message);
@@ -103,13 +109,13 @@ public class Util {
 
     /**
      * Display-Independent-Pixels to Regular Pixels converter
-     *
+     * <p>
      * Converts dips to px.
      *
-     * @since 1.0.0
-     * @param  context      context of where the method was called from
-     * @param  dp           dip that is to be converted
+     * @param context context of where the method was called from
+     * @param dp      dip that is to be converted
      * @return int          equivalent px value of dp
+     * @since 1.0.0
      */
     public static int dpToPx(Context context, int dp) {
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
@@ -117,29 +123,13 @@ public class Util {
     }
 
     /**
-     * Regular Pixels to Display-Independent-Pixels converter
-     *
-     * Converts px to dips
-     *
-     * @since 1.0.0
-     * @param  context      context of where the method was called from
-     * @param  px           px that is to be converted
-     * @return int          equivalent dp value of px
-     */
-    public int pxToDp(Context context, int px) {
-        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
-        int dp = Math.round(px / (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
-        return dp;
-    }
-
-    /**
      * Random
-     *
+     * <p>
      * Generates a random integer from 0 to i.
      *
-     * @since 1.0.0
-     * @param  i           upper limit of random number
+     * @param i upper limit of random number
      * @return int         random number that was generated
+     * @since 1.0.0
      */
     public static int Random(int i) {
         Random rand = new Random();
@@ -148,11 +138,12 @@ public class Util {
 
     /**
      * to Three Digit String
-     *
+     * <p>
      * Converts any integer into a string with at least three characters.
-     * @since 1.0.0
-     * @param num          number from 0-100 that is to be converted as a three character string
+     *
+     * @param num number from 0-100 that is to be converted as a three character string
      * @return string      converted string
+     * @since 1.0.0
      */
     public static String to3Digit(int num) {
         String pattern = "000";
@@ -160,6 +151,22 @@ public class Util {
 
         String str = decimalFormat.format(num);
         return str;
+    }
+
+    /**
+     * Regular Pixels to Display-Independent-Pixels converter
+     * <p>
+     * Converts px to dips
+     *
+     * @param context context of where the method was called from
+     * @param px      px that is to be converted
+     * @return int          equivalent dp value of px
+     * @since 1.0.0
+     */
+    public int pxToDp(Context context, int px) {
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        int dp = Math.round(px / (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+        return dp;
     }
 
 }

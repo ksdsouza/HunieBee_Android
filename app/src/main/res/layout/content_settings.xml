@@ -31,7 +31,7 @@
         style="@android:style/TextAppearance.Material.Subhead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Set the probability of how often each image should be shown." />
+        android:text="@string/image_settings_desc" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,10 +41,19 @@
         android:weightSum="5">
 
         <TextView
+            android:id="@+id/textView2"
             style="@android:style/TextAppearance.Material.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Image 1" />
+
+        <TextView
+            style="@android:style/TextAppearance.Material.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" (NSFW) "
+            android:textColor="@android:color/holo_red_light"
+            android:visibility="invisible" />
 
         <SeekBar
             android:id="@+id/seek1"
@@ -56,10 +65,10 @@
         <TextView
             android:id="@+id/val1"
             style="@android:style/TextAppearance.Material.Body1"
-            android:layout_width="wrap_content"
+            android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="number"
+            android:gravity="center"
             android:text="0" />
     </LinearLayout>
 
@@ -71,10 +80,19 @@
         android:weightSum="5">
 
         <TextView
+            android:id="@+id/textView3"
             style="@android:style/TextAppearance.Material.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Image 2" />
+
+        <TextView
+            style="@android:style/TextAppearance.Material.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" (NSFW) "
+            android:textColor="@android:color/holo_red_light"
+            android:visibility="invisible" />
 
         <SeekBar
             android:id="@+id/seek2"
@@ -86,10 +104,10 @@
         <TextView
             android:id="@+id/val2"
             style="@android:style/TextAppearance.Material.Body1"
-            android:layout_width="wrap_content"
+            android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="number"
+            android:gravity="center"
             android:text="0" />
     </LinearLayout>
 
@@ -107,10 +125,11 @@
             android:text="Image 3" />
 
         <TextView
+            android:id="@+id/textView"
             style="@android:style/TextAppearance.Material.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="(NSFW)"
+            android:text=" (NSFW) "
             android:textColor="@android:color/holo_red_light" />
 
         <SeekBar
@@ -122,10 +141,10 @@
         <TextView
             android:id="@+id/val3"
             style="@android:style/TextAppearance.Material.Body1"
-            android:layout_width="wrap_content"
+            android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="number"
+            android:gravity="center"
             android:text="0" />
     </LinearLayout>
 
@@ -146,7 +165,7 @@
             style="@android:style/TextAppearance.Material.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="(NSFW)"
+            android:text=" (NSFW) "
             android:textColor="@android:color/holo_red_light" />
 
         <SeekBar
@@ -159,10 +178,32 @@
         <TextView
             android:id="@+id/val4"
             style="@android:style/TextAppearance.Material.Body1"
-            android:layout_width="wrap_content"
+            android:layout_width="24dp"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:gravity="center"
             android:text="0" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@android:style/TextAppearance.Material.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Credits" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#BDBDBD"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        style="@android:style/TextAppearance.Material.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/credits" />
 
 </LinearLayout>
