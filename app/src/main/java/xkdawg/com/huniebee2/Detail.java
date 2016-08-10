@@ -75,6 +75,7 @@ public class Detail extends AppCompatActivity {
         desc.setLineSpacing(0f, 1.1f);
         personality.setLineSpacing(0f, 1.1f);
         history.setLineSpacing(0f, 1.1f);
+        ctl.setExpandedTitleMarginBottom(32);
         int picNum = picToLoad();
         switch (person) {
             case "xkdawg.com.huniebee2:id/aiko":
@@ -306,7 +307,7 @@ public class Detail extends AppCompatActivity {
             tv = new TextView(this);
             tv.setTextAppearance(this, android.support.design.R.style.TextAppearance_AppCompat_Body1);
             tv.setPadding(42, 10, 42, 42);
-            tv.setGravity(Gravity.RIGHT);
+            tv.setGravity(Gravity.END);
 
             if ((girlName.equalsIgnoreCase("Kyu") || girlName.equalsIgnoreCase("Celeste") || girlName.equalsIgnoreCase("Venus")) && i == 1) {
                 tv.setText(getInfo("Homeworld"));
@@ -338,7 +339,7 @@ public class Detail extends AppCompatActivity {
             tv.setText(getPref(PREF_FILE_HEADERS[i]));
             tv.setTextAppearance(this, android.support.design.R.style.TextAppearance_AppCompat_Body1);
             tv.setPadding(42, 10, 42, 42);
-            tv.setGravity(Gravity.RIGHT);
+            tv.setGravity(Gravity.END);
 
             header.addView(tv);
             detail.addView(header);
@@ -356,7 +357,7 @@ public class Detail extends AppCompatActivity {
      */
     public String getInfo(String infoType) {
         try {
-            Scanner fileScanner = new Scanner(getAssets().open(String.format("information.txt")));
+            Scanner fileScanner = new Scanner(getAssets().open("information.txt"));
             String currentLine;
             String info;
 
@@ -394,7 +395,7 @@ public class Detail extends AppCompatActivity {
      */
     public String getPref(String prefType) {
         try {
-            Scanner fileScanner = new Scanner(getAssets().open(String.format("preferences.txt")));
+            Scanner fileScanner = new Scanner(getAssets().open("preferences.txt"));
             String currentLine;
             String info;
 
@@ -421,16 +422,9 @@ public class Detail extends AppCompatActivity {
         return null;
     }
 
-    /**
-     * On Back
-     * <p>
-     * What to do if back button is pressed(go back...duh)
-     *
-     * @param v which view called this
-     * @return void
-     * @since 1.0.0
-     */
-    public void onBack(View v) {
+
+    @Override
+    public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }

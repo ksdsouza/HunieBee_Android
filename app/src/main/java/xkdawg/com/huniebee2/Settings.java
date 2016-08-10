@@ -64,7 +64,7 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
         for (int i = 0; i < 4; i++) {
             sb[i].setOnSeekBarChangeListener(this);
             sb[i].setProgress(MainActivity.num[i]);
-            tv[i].setText("" + MainActivity.num[i]);
+            tv[i].setText(String.valueOf(MainActivity.num[i]));
         }
     }
 
@@ -81,22 +81,22 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
         switch (seekBar.getId()) {
             case R.id.seek1:
                 Util.info("HunieBee2", "" + sb[0].getProgress());
-                tv[0].setText("" + seekBar.getProgress());
+                tv[0].setText(String.valueOf(seekBar.getProgress()));
                 break;
 
             case R.id.seek2:
                 Util.info("HunieBee2", "" + sb[1].getProgress());
-                tv[1].setText("" + seekBar.getProgress());
+                tv[1].setText(String.valueOf(seekBar.getProgress()));
                 break;
 
             case R.id.seek3:
                 Util.info("HunieBee2", "" + sb[2].getProgress());
-                tv[2].setText("" + seekBar.getProgress());
+                tv[2].setText(String.valueOf(seekBar.getProgress()));
                 break;
 
             default:
                 Util.info("HunieBee2", "" + sb[3].getProgress());
-                tv[3].setText("" + seekBar.getProgress());
+                tv[3].setText(String.valueOf(seekBar.getProgress()));
                 break;
         }
     }
@@ -141,10 +141,10 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
 
-        editor.putString("imageVals", "" + Util.to3Digit(sb[0].getProgress()) + Util.to3Digit(sb[1].getProgress())
+        editor.putString("imageVals", String.valueOf(Util.to3Digit(sb[0].getProgress())) + Util.to3Digit(sb[1].getProgress())
                 + Util.to3Digit(sb[2].getProgress()) + Util.to3Digit(sb[3].getProgress()));
 
-        Util.info("HunieBee2", ("" + Util.to3Digit(sb[0].getProgress()) + Util.to3Digit(sb[1].getProgress())
+        Util.info("HunieBee2", (String.valueOf(Util.to3Digit(sb[0].getProgress())) + Util.to3Digit(sb[1].getProgress())
                 + Util.to3Digit(sb[2].getProgress()) + Util.to3Digit(sb[3].getProgress())));
 
         for (int i = 0; i < 4; i++) {
@@ -155,16 +155,9 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
     }
 
 
-    /**
-     * On Back
-     * <p/>
-     * What to do if back button is pressed(go back...duh)
-     *
-     * @param v which view called this
-     * @return void
-     * @since 1.0.0
-     */
-    public void onBack(View v) {
-        finish();
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_out_right);
     }
 }

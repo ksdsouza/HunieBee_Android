@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     public void goToSettings(View v) {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
     }
 
     /**
